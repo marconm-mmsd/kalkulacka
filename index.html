@@ -24,7 +24,7 @@ z-index:-1;
 /* LOGO AL CENTRO */
 .logo-container {
   text-align: left;
-  margin: 0 40px 0 40px;
+  margin: 40px 40px 0 40px;
   padding: 0px;
 }
 .logo {
@@ -65,7 +65,7 @@ button:hover::before{left:100%;}
 button:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(72,187,120,0.35);}
 /* RESULT BOX - NASCOSTO DI DEFAULT */
 #vysledek{
-margin-top:15px;padding:10px;
+margin-top:30px;padding:10px;
 font-size:22px;font-weight:700;color:white;text-align:center;line-height:1.1;
 display:none; /* NASCOSTO inizialmente */
 }
@@ -76,7 +76,6 @@ form{padding:15px 25px;max-width:50vw;margin:20px auto;} /* Più stretto */
 h1{font-size:1.5em;padding:10px 20px;max-width:85vw;margin:0 auto 15px;} /* Più stretto */
 input[type=number]{font-size:18px;padding:14px 18px;}
 body { overflow-y: auto; } /* Scroll verticale quando necessario */
-logo-container { background-color: black; }
 }
 </style>
 </head>
@@ -131,8 +130,7 @@ else if(dny===5)cenaZaOsobu=tarif['5_dny'];
 else if(dny===6)cenaZaOsobu=tarif['6_dny'];
 else cenaZaOsobu=tarif['7plus'];
 const celkem=cenaZaOsobu*osoby*dny;
-vysledek.innerHTML=`🛌🏻 Osoba/noc: <strong>${cenaZaOsobu}</strong> Kč<br><br>🏖️ Celkem: <strong>${celkem.toLocaleString()}</strong> Kč
-<br><br>`;
+vysledek.innerHTML=`🛌🏻 Osoba/noc: <strong>${cenaZaOsobu}</strong> Kč<br><br>🏖️ Celkem: <strong>${celkem.toLocaleString()}</strong> Kč`;
 //vysledek.style.background='linear-gradient(135deg,#48bb78,#38a169)';
 vysledek.style.display='block'; // MOSTRA risultato
 });
