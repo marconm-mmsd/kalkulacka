@@ -69,12 +69,12 @@ button:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(72,187,120,0
   margin: 40px 40px 0 40px;
   padding: 0px;
   display:none; /* NASCOSTO inizialmente */
-  animation-duration: 1.4s;
+  animation-duration: 2s;
   animation-name: slide-in2;
 }
 @keyframes slide-in2 {
   from {
-    translate: 150vw 0;
+    translate: -150vw 0;
     scale: 100% 1;  
   }
   to {
@@ -161,7 +161,7 @@ document.getElementById('vypocetForm').addEventListener('submit',e=>{
 		vysledek.style.display='block'; // MOSTRA risultato
 		setTimeout(() => {
 			logo_container.style.display='block'; // MOSTRA logo
-		}, 800);
+		}, 750);
 	}, 500);
 });
 </script>
