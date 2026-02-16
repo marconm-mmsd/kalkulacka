@@ -23,7 +23,7 @@ h1 {
 }
 
 form {
-	background:rgba(255,255,255,0.93);backdrop-filter:blur(20px);padding:30px;border-radius:25px;
+	background:rgba(255,255,255,0.93);backdrop-filter:blur(20px);padding:25px;border-radius:25px;
 	box-shadow:0 20px 40px rgba(0,0,0,0.2),inset 0 1px 0 rgba(255,255,255,0.6);
 	border:1px solid rgba(255,255,255,0.5);position:relative;z-index:10;margin:40px 0;
 }
@@ -47,8 +47,8 @@ button:hover::before{left:100%;}
 button:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(72,187,120,0.35);}
 
 #vysledek{
-	margin-top:30px;padding:10px;
-	font-size:22px;font-weight:700;color:white;text-align:center;line-height:1.1;
+	margin-top:20px;padding:10px;
+	font-size:22px;font-weight:600;color:white;text-align:center;line-height:1;
 	display:none; /* NASCOSTO inizialmente */
 	animation-duration: 1s;
 	animation-name: slide-in;
@@ -66,7 +66,7 @@ button:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(72,187,120,0
 
 #logo-container {
   text-align: left;
-  margin: 40px 40px 0 40px;
+  margin: 25px 25px 0 25px;
   padding: 0px;
   display:none; /* NASCOSTO inizialmente */
   animation-duration: 5s;
@@ -91,7 +91,7 @@ button:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(72,187,120,0
 	body{padding:10px 30px;} /* Più margine orizzontale */
 	form{padding:15px 25px;max-width:50vw;margin:20px auto;} /* Più stretto */
 	h1{font-size:1.5em;padding:10px 20px;max-width:85vw;margin:0 auto 15px;} /* Più stretto */
-	input[type=number]{font-size:18px;padding:14px 18px;}
+	input[type=number]{font-size:16px;padding:12px 16px;}
 }
 </style>
 </head>
@@ -151,7 +151,7 @@ document.getElementById('vypocetForm').addEventListener('submit',e=>{
 		else cenaZaOsobu=tarif['7plus'];
 		const celkem=cenaZaOsobu*osoby*dny;
 		vysledek.innerHTML=`🛌🏻 Osoba/noc: <strong>${cenaZaOsobu}</strong> Kč<br><br>🏖️ Celkem: <strong>${celkem.toLocaleString()}</strong> Kč<br>
-		<small><small><small>Cena zahrnuje: ložní prádlo a ručníky dle počtu osob, spotřebu vody a elektřiny, WiFi, parkování, uvítací balíček, závěrečný úklid</small></small></small>`;
+		<small><small><small>Cena je orientační a zahrnuje: ložní prádlo a ručníky dle počtu osob, spotřebu vody a elektřiny, WiFi, parkování, uvítací balíček, závěrečný úklid</small></small></small>`;
 		//vysledek.style.background='linear-gradient(135deg,#48bb78,#38a169)';
 		vysledek.style.display='block'; // MOSTRA risultato
 		setTimeout(() => {
