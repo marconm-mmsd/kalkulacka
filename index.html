@@ -69,18 +69,12 @@ button:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(72,187,120,0
   margin: 40px 40px 0 40px;
   padding: 0px;
   display:none; /* NASCOSTO inizialmente */
-  animation-duration: 2s;
-  animation-name: slide-in2;
+  animation-duration: 5s;
+  animation-name: fade-in;
 }
-@keyframes slide-in2 {
-  from {
-    translate: -150vw 0;
-    scale: 100% 1;  
-  }
-  to {
-    translate: 0 0;
-    scale: 100% 1;  
-  }
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 .logo {
 	max-width:240px;
@@ -156,7 +150,8 @@ document.getElementById('vypocetForm').addEventListener('submit',e=>{
 		else if(dny===6)cenaZaOsobu=tarif['6_dny'];
 		else cenaZaOsobu=tarif['7plus'];
 		const celkem=cenaZaOsobu*osoby*dny;
-		vysledek.innerHTML=`🛌🏻 Osoba/noc: <strong>${cenaZaOsobu}</strong> Kč<br><br>🏖️ Celkem: <strong>${celkem.toLocaleString()}</strong> Kč`;
+		vysledek.innerHTML=`🛌🏻 Osoba/noc: <strong>${cenaZaOsobu}</strong> Kč<br><br>🏖️ Celkem: <strong>${celkem.toLocaleString()}</strong> Kč<br>
+		<small><small><small>Cena zahrnuje: ložní prádlo a ručníky dle počtu osob, spotřebu vody a elektřiny, WiFi, parkování, uvítací balíček, závěrečný úklid</small></small></small>`;
 		//vysledek.style.background='linear-gradient(135deg,#48bb78,#38a169)';
 		vysledek.style.display='block'; // MOSTRA risultato
 		setTimeout(() => {
